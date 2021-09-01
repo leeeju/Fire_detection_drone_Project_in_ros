@@ -1,0 +1,16 @@
+설명서
+
+1. '18_fly_by_param.launch' 파일을 런치 폴더에 둔다.
+2. 런치 폴더의 다른 런치 폴더는 다른 폴더로 이동시킨다. (확실치는 않으나, 다른 런치 파일의 파라미터 설정도 실행회지 않더라도 영향을 주는 것 같음)
+3. 나머지 4개의 py파일을 스크립트 폴더에 이동시킨다. 이전 버전과 동일하나 사소한 부분을 조정하고 고쳤다.
+4. '18-2_detect_fire.py'의 xml 파일의 경로를 수정한다.
+5. 4개의 py파일의 임포트가 자신의 패키지 폴더의 py파일과 제대로 대응하는지 확인한다.
+
+6. 실행한다. 실행 방법은 이전과 동일하다.
+ 6.1. 'sudo systemctl start firmwared.service' 실행
+ 6.2. 'sphinx /opt/parrot-sphinx/usr/share/sphinx/drones/bebop2.drone' 실행
+ 6.3. 'roslaunch bebop_driver bebop_sphinx.launch' 실행
+ 6.4. 'node ~/gps2web/app.js' 실행행
+ 6.5. 'rosrun bb2_pkg bebop_gps2web.py 1' 실행
+ 6.6. 'rosrun uvc_camera uvc_camera_node' 실
+ 6.6. 'roslaunch 18_fly_by_param.launch' 실행
