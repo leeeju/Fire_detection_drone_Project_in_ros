@@ -65,9 +65,8 @@ if __name__ == '__main__':
     ftime = 0.0
 
     try:
-        #fire_cascade = cv2.CascadeClassifier('/home/kicker/catkin_ws/src/bb2_pkg/scripts/fire_detection.xml') 
         fire_cascade = cv2.CascadeClassifier('/home/kicker/catkin_ws/src/bb2_pkg/scripts/cascade025.xml')
-        #  cascade_jh.xml  //  cascade_sh_13.xml  //  cascade007.xml
+        
 
         while not rospy.is_shutdown():
            cod1 = rospy.get_param("/fire_detectorl/param_of_detector")
