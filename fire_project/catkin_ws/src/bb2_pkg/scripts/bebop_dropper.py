@@ -15,3 +15,5 @@ while(ch != 'Q'):
   else:
     sp.write('0')
     print("nothing happen~")  
+
+    
