@@ -45,19 +45,4 @@ class RotateByAtti:
     else:
       exit()
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
