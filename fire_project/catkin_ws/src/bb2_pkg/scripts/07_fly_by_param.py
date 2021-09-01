@@ -36,3 +36,4 @@ if __name__ == '__main__':
       mvd.move_xy(-0.5, 0.1)      
     elif cod1 == 0:                 #중앙
       mvd.landing()
+      
