@@ -144,3 +144,5 @@ class MoveBB2:
     
     def emergency(self):
         self.pub3.publish(self.empty_msg);  print "emergency"
+
+        
