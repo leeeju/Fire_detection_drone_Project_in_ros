@@ -25,3 +25,4 @@
   <param name="ori_lati" type="double" value="0.0" />
   <param name="ori_long" type="double" value="0.0" />
 </launch>
+
