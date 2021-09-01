@@ -19,8 +19,8 @@ def cb_get_gps(msg):
 if __name__ == '__main__':
     rospy.init_node('play_alarm')
     rospy.Subscriber('/bebop/states/ardrone3/PilotingState/PositionChanged', Ardrone3PilotingStatePositionChanged, cb_get_gps)
-    account_sid = 'AC3a674bf50d4d0511d8600550e6e50739'
-    auth_token = '715e9cbd3d7bbd699606e9915362381c'
+    account_sid = 'twilio_sid'
+    auth_token = 'twilio_token'
     client = Client(account_sid, auth_token)
 
     #일단, 구동하자마자 시작점의 위도, 경도를 파라미터에 저장한다.
@@ -39,12 +39,12 @@ if __name__ == '__main__':
         while not rospy.is_shutdown():
             if rospy.get_param("/play_alarml/fire_detection_state") is True:
                 playsound('/home/kicker/catkin_ws/src/bb2_pkg/scripts/alarm.mp3') 
-                alarm_s1 = str(lati_now) + ', '
-                alarm_s2 = str(long_now)
-                alarm_s3 = "에서 화재가 발생하였습니다"
-                alarm_message = alarm_s1+alarm_s2+alarm_s3
+                alarm_s1 = str(lati_now) + ', '                                     #위도
+                alarm_s2 = str(long_now)                                            #경도
+                alarm_s3 = "에서 화재가 발생하였습니다"                                   #메시지
+                alarm_message = alarm_s1+alarm_s2+alarm_s3                         
                 print(alarm_message)
-                message = client.api.account.messages.create(to="+821077572419", from_="+17378885431", body= alarm_message )
-                rospy.sleep(3)
+                message = client.api.account.messages.create(to="+821000000000", from_="+00000000000", body= alarm_message )
+                rospy.sleep(3)                                  
     except rospy.ROSInterruptException:
         exit()
