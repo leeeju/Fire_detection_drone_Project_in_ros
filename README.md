@@ -15,6 +15,8 @@ project 요약 설명 : 신고를 받은 드론이 화재지점으로 날아가 
 
 개발환경 : Ubuntu 18.04 , R.O.S_melodic
 
+HW : bebop Parrot
+
 시뮬레이션 환경 : Gazebo
                       
 더 많은 관련 사진은 좌측 상단의 < lssues > 를 참고 해 주세요.
