@@ -1,0 +1,29 @@
+<launch>
+  <node pkg="bb2_pkg" type="21-0_Manager.py" name="Fire_drone_managerl" output="screen" >
+    <param name="order" type="int" value="0" />  
+  </node>
+  <!-- 사용자가 지정한 목표 지점으로 비행하여 순찰하는 비행 코드의 파라미터를 설정하고 실행한다. 0은 아무것도 안하는 모드, 1은 사용자가 입력한 목표 지점으로 이동하는 모드, 2는 시작점으로 되돌아 오는 모드를 가리킨다.-->
+  <node pkg="bb2_pkg" type="21-1_FlyTarget.py" name="fly_to_targetl" output="screen" >
+    <param name="param_of_flying" type="int" value="0" />
+  </node>
+  <!-- 불을 인식하는 코드의 파라미터를 설정하고 실행한다  -->
+  <node pkg="bb2_pkg" type="21-2_detect_fire.py" name="fire_detectorl" output="screen" >
+    <param name="param_of_detector" type="bool" value="False" />
+  </node>
+  <!-- 불 발생 알람을 전송하는 코드를 실행한다-->
+  <node pkg="bb2_pkg" type="21-3_play_alarm.py" name="play_alarml" output="screen" >
+    <param name="fire_detection_state" type="bool" value="False" />
+  </node>
+  <!-- 베터리의 잔량을 보여주는 노드를 실행한다 -->
+  <node pkg="bb2_pkg" type="21-4_battery.py" name="Battery_Levell" output="screen" ></node>
+  <!-- 드론의 xyth 등 좌표값을 발행하는 코드를 실행한다-->
+  <node pkg="bb2_pkg" type="bebop_pub_odom_pose.py" name="bb2_pub_odom_posel"> </node>
+  <!-- 파라미터 서버에 목적지의 위도와 경도를 각각 저장할 파라미터를 아래와 같이 설정한다-->
+  <param name="tar_lati" type="double" value="0.0" />
+  <param name="tar_long" type="double" value="0.0" />
+  <!-- 파라미터 서버네서 처음 시작점의 위도와 경도를 저장할 파라미터를 아래와 같이 설정한다 -->
+  <param name="ori_lati" type="double" value="0.0" />
+  <param name="ori_long" type="double" value="0.0" />
+  <!-- 순찰 비행의 횟수를 저장하는 파라미터를 아래와 같이 설정한다 -->
+  <param name="patrol_num" type="int" value="6" />
+</launch>
