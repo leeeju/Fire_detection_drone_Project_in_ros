@@ -14,4 +14,3 @@
  6.5. 'rosrun bb2_pkg bebop_gps2web.py 1' 실행
  6.6. 'rosrun uvc_camera uvc_camera_node' 실
  6.6. 'roslaunch 18_fly_by_param.launch' 실행
-
