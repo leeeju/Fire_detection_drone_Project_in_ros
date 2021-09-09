@@ -68,4 +68,4 @@ cascade Data란? 화면상의 오브젝트를 사용자가 지정한 것으로 �
 
 
 
-
+화재탐지 코드의 참고자료 = 'https://drive.google.com/drive/folders/1d7zXrADtUJ7HYTDJHpTw8bv2-EW1lYSD'
