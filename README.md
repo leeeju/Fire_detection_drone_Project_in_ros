@@ -20,6 +20,7 @@ HW : bebop Parrot
 시뮬레이션 환경 : Gazebo
 
 팀원 :  이선환, 이주현, 조민석, 한정훈
+  - 지도교수 : ground_Zero
                       
 더 많은 관련 사진은 좌측 상단의 < lssues > 를 참고 해 주세요.
 
